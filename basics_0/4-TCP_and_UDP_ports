@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Display listening ports
+# Displays listening ports with PID and program name
 
-sudo ss -lpn
+sudo netstat -lpn

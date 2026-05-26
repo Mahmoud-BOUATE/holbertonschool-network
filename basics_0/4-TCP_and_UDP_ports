@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 # Displays listening ports with PID and program name
 
-
-sudo netstat -lpn
+if command -v netstat >/dev/null 2>&1; then
+	netstat -lpn
+else
+	ss -ltnup
+fi
